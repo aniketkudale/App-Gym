@@ -1,0 +1,88 @@
+
+:root {
+  --grey: #212529;
+  --border: 10px solid;
+}
+.container {
+  position: relative;
+  display: inline-flex;
+  user-select: none;
+  cursor: pointer;
+  margin: 0 10px;
+  -webkit-tap-highlight-color: transparent;
+}
+.tooltipContent {
+  color: #ffffff;
+  position: absolute;
+  z-index: 10;
+  padding: 12px;
+  font-size: 12px;
+  cursor: default;
+  border-radius: 3px;
+  white-space: nowrap;
+  font-family: monospace;
+  background-color: var(--grey);
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.16);
+  animation: fadeIn ease-in-out 0.65s;
+}
+.primary-border {
+  border: 2px solid #74b9ff;
+}
+
+.success-border {
+  border: 2px solid #00b894;
+}
+
+.danger-border {
+  border: 2px solid #ff7675;
+}
+
+.warning-border {
+  border: 2px solid #fdcb6e;
+}
+
+.tooltipContent.sm {
+  max-width: 23rem;
+}
+.tooltipContent.md {
+  max-width: 40rem;
+}
+.arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.top {
+  bottom: calc(118%);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right,
+.left {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right {
+  left: calc(118%);
+}
+
+.left {
+  right: calc(118%);
+}
+
+.bottom {
+  top: calc(118%);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
